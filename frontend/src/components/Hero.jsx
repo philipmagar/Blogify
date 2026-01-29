@@ -11,24 +11,23 @@ const Hero = ({ searchQuery, setSearchQuery, selectedCategory, setSelectedCatego
             transition={{ duration: 0.8 }}
             className="mx-8 sm:mx-16 xl:mx-24 relative"
         >
-            <div className=" text-center mt-20 mb-8">
+            <div className=" text-center mt-10 mb-8">
                 <motion.h1
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.2 }}
-                    className="text-3xl sm:text-6xl font-semibold sm:leading-16 text-gray-700"
+                    className="text-4xl sm:text-7xl font-bold sm:leading-18 text-gray-800 tracking-tight"
                 >
-                    Your own<span className="text-primary"> Blogging</span><br /> platform.
+                    Forge Your <span className="text-primary italic">Legacy.</span><br /> Own the Conversation.
                 </motion.h1>
 
                 <motion.p
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.3 }}
-                    className="my-6 sm:my-8 max-w-2xl m-auto max-sm:text-xs text-gray-500"
+                    className="my-6 sm:my-10 max-w-3xl m-auto max-sm:text-xs text-gray-600 text-lg leading-relaxed font-medium"
                 >
-                    This is your space to think out loud, and share what matters, and to write without filters.
-                    whether its one word or a thousand, your story starts here.
+                    The world is waiting for your next breakthrough. Join an elite collective of visionaries, thinkers, and creators redefining the digital frontier. Your story isn't just data it's power.
                 </motion.p>
 
                 <motion.div
@@ -63,8 +62,8 @@ const Hero = ({ searchQuery, setSearchQuery, selectedCategory, setSelectedCatego
                                 key={cat}
                                 onClick={() => setSelectedCategory(cat)}
                                 className={`px-4 py-1.5 rounded-full text-xs font-semibold cursor-pointer transition-all ${selectedCategory === cat
-                                        ? "bg-primary text-white shadow-md shadow-primary/20"
-                                        : "bg-gray-100 text-gray-500 hover:bg-gray-200"
+                                    ? "bg-primary text-white shadow-md shadow-primary/20"
+                                    : "bg-gray-100 text-gray-500 hover:bg-gray-200"
                                     }`}
                             >
                                 {cat}

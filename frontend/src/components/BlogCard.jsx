@@ -1,14 +1,17 @@
 import React from "react";
 import { motion } from "motion/react";
+import { useNavigate } from "react-router-dom";
 
 const BlogCard = ({ blog }) => {
+    const navigate = useNavigate();
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             whileHover={{ y: -5, transition: { duration: 0.2 } }}
-            className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-shadow duration-300"
+            onClick={() => navigate(`/blog/${blog.id}`)}
+            className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer"
         >
             <div className="relative h-48 overflow-hidden">
                 <img

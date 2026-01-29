@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import BlogList from "../components/BlogList";
+import Newsletter from "../components/Newsletter";
 
 const Home = () => {
     const [searchQuery, setSearchQuery] = useState("");
@@ -20,6 +21,7 @@ const Home = () => {
                 searchQuery={searchQuery}
                 selectedCategory={selectedCategory}
             />
+            <Newsletter />
         </div>
     );
 };
