@@ -82,13 +82,9 @@ const Blog = () => {
                     <p className="text-xl font-medium text-gray-600 mb-8 italic border-l-4 border-primary pl-6 py-2">
                         {blog.description}
                     </p>
-                    <p className="mb-6">{blog.content}</p>
-                    <p className="mb-6">
-                        Beyond the technical specifications, what truly matters is how these advancements affect our
-                         daily lives.Whether it's the tools we use for work or the way we manage our finances, the 
-                         transition towards a moreintegrated and intelligent digital landscape is inevitable. The question remains: are we ready to adapt
-                        to these rapid changes?
-                    </p>
+                    {blog.content.split('\n\n').map((paragraph, index) => (
+                        <p key={index} className="mb-6">{paragraph}</p>
+                    ))}
                 </div>
                 <div className="border-y border-gray-100 py-8 mb-16 flex flex-col sm:flex-row justify-between 
                 items-center gap-6">
@@ -114,7 +110,7 @@ const Blog = () => {
                 <div className="mb-16">
                     <h3 className="text-2xl font-bold text-gray-800 mb-10 flex items-center gap-4">
                         Comments <span className="text-primary bg-primary/10 px-3 py-1 rounded-full text-xs">
-                        {dummyComments.length}</span>
+                            {dummyComments.length}</span>
                     </h3>
 
                     <div className="space-y-10 mb-12 px-2 sm:px-0">
